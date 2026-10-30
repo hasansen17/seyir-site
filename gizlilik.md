@@ -8,28 +8,33 @@ lang: tr
 
 **Son güncelleme:** 30 Ekim 2026
 
-Seyir, Türk dizilerini takip etmek için yapılmış bir iPhone uygulamasıdır. Bu metin, uygulamanın hangi verileri kullandığını ve bunlara ne olduğunu kısa ve açık biçimde anlatır.
+Seyir, Türk dizilerini takip etmek için yapılmış bir iPhone uygulamasıdır. Bu metin, uygulamanın hangi verileri topladığını, neden topladığını ve bunlara ne olduğunu kısa ve açık biçimde anlatır.
 
 ## Kısaca
 
-- Seyir'de hesap yoktur; kayıt olmanız ya da giriş yapmanız istenmez.
-- Uygulamaya yazdığınız her şey (adınız, profil fotoğrafınız, favorileriniz, izleme durumlarınız, puanlarınız, listeleriniz) **yalnızca telefonunuzda** saklanır. Bize ya da başka birine gönderilmez.
-- Tek istisna yeni bölüm bildirimleridir: bildirimleri açarsanız cihazınızın bildirim adresi ve bildirim almak istediğiniz dizilerin listesi sunucumuzda tutulur (aşağıda anlatılıyor). Bildirimleri kapatınca silinir.
-- Reklam yoktur, kullanım ölçümü (analitik) yoktur, üçüncü taraf takip aracı yoktur.
-- Uygulamayı sildiğinizde telefonunuzdaki bütün Seyir verileri silinir.
+- Dizileri gezmek, aramak ve yayın takvimine bakmak için hesap gerekmez; bu sırada sizinle ilgili hiçbir veri toplanmaz.
+- İzleme listesi, puan, favori, liste ve bildirim gibi kişisel özellikler için **Apple ile giriş** yaparsınız. Şifre yoktur; kimliğinizi Apple doğrular.
+- Giriş yapınca Apple'dan gelen e-posta adresiniz ve (isterseniz) adınız ile uygulamada oluşturduğunuz kişisel veriler (izleme durumları, puanlar, favoriler, listeler) hesabınıza bağlı olarak sunucumuzda saklanır. Böylece telefon değiştirseniz de kaybolmazlar.
+- Reklam yoktur, kullanım ölçümü (analitik) yoktur, üçüncü taraf takip aracı yoktur. Verileriniz satılmaz, kimseyle paylaşılmaz.
+- Hesabınızı istediğiniz an Ayarlar'dan silebilirsiniz; sunucudaki her şey silinir.
 
-## Telefonunuzda saklanan veriler
+## Hesap ve toplanan veriler
 
-Aşağıdakiler yalnızca sizin cihazınızda tutulur:
+Apple ile giriş yaptığınızda şunlar saklanır:
 
-- Profil ekranına yazdığınız ad ve seçtiğiniz profil fotoğrafı
-- Favori dizileriniz ve oyuncularınız
-- İzleme durumlarınız (İzleme listem, Seyirdekiler, İzledim)
-- Dizilere verdiğiniz puanlar
-- Oluşturduğunuz listeler
-- Daha hızlı açılması için dizi ve oyuncu bilgilerinin bir kopyası (önbellek)
+- **Apple kullanıcı kimliği:** Apple'ın hesabınız için ürettiği, yalnızca Seyir'e özel rastgele bir kod. Sizi tanımak için kullanılır.
+- **E-posta adresiniz:** Apple'dan gelir. Apple'ın "E-postamı gizle" seçeneğini kullanırsanız gerçek adresiniz yerine Apple'ın verdiği aktarma adresi saklanır; bu da bizim için yeterlidir. E-posta yalnızca hesabınızı tanımlamak için tutulur; bülten ya da reklam gönderilmez.
+- **Adınız:** Apple'dan gelirse profilinizde görünen ad olarak kullanılır; dilediğiniz gibi değiştirebilir ya da silebilirsiniz.
+- **Uygulamada oluşturduğunuz veriler:** izleme durumlarınız (İzleme listem, Seyirdekiler, izlendi işareti), dizilere verdiğiniz puanlar, favori dizileriniz ve oyuncularınız, listeleriniz ve içerikleri.
 
-Bu veriler Seyir'in sunucusuna yüklenmez. Yedekleme yapıyorsanız iCloud ya da iTunes yedeğinizin içinde yer alabilir; bu Apple'ın yedekleme ayarlarınıza bağlıdır.
+Bu veriler Seyir'in sunucusunda (Supabase altyapısı, Frankfurt/Almanya) saklanır ve yalnızca sizin hesabınızla okunabilir; başka kullanıcılar göremez. Puanlarınız, diziye verilen ortalama "Seyir puanı"nın hesabına **kimliksiz** olarak katılır (kimin kaç puan verdiği gösterilmez).
+
+Hesap oluşturmadan önce telefonunuzda biriktirdiğiniz listeler ve puanlar varsa, ilk girişte hesabınıza taşınır.
+
+## Telefonunuzda saklananlar
+
+- Profil fotoğrafınız ve seçtiğiniz kapak görseli yalnızca telefonunuzda tutulur, sunucuya yüklenmez.
+- Daha hızlı açılması için dizi ve oyuncu bilgilerinin ve hesabınızdaki verilerin bir kopyası (önbellek) telefonunuzda durur. Çıkış yaptığınızda kişisel kopya temizlenir.
 
 ## Fotoğraf ve kamera izni
 
@@ -37,18 +42,15 @@ Profil fotoğrafı seçmek isterseniz uygulama galerinize ya da kameranıza eri�
 
 ## Yeni bölüm bildirimleri
 
-Bildirimleri açarsanız (uygulama sorar; istemezseniz hiçbir şey gönderilmez) şunlar Seyir'in sunucusunda (Supabase altyapısı, Frankfurt/Almanya) saklanır:
-
-- Cihazınızın bildirim adresi (Apple ve Expo'nun bildirim iletmek için verdiği, rastgele bir kod — "push token")
-- Seyirdekiler ve İzleme listem'deki dizilerin kimlik numaraları (yalnızca hangi dizilerin bildirileceğini bilmek için)
-
-Bu kayıt adınızla, e-postanızla ya da başka bir kimlik bilgisiyle ilişkilendirilmez; biz bu kodun kime ait olduğunu bilemeyiz. Kayıt, Ayarlar'dan bildirimleri kapattığınızda hemen silinir; uygulamayı sildiğinizde de bildirim adresi geçersiz hale gelir ve kayıt temizlenir. Bildirimler her gün akşam, takip ettiğiniz dizilerden o gün yeni bölümü olan varsa gönderilir; başka amaçla (reklam, duyuru) kullanılmaz.
+Bildirimleri açarsanız (uygulama sorar; istemezseniz hiçbir şey gönderilmez) cihazınızın bildirim adresi (Apple ve Expo'nun bildirim iletmek için verdiği rastgele bir kod, "push token") hesabınıza bağlı olarak sunucuda saklanır. Bildirimler her gün akşam, takip ettiğiniz dizilerden o gün yeni bölümü olan varsa gönderilir; başka amaçla (reklam, duyuru) kullanılmaz. Ayarlar'dan bildirimleri kapattığınızda ya da çıkış yaptığınızda kayıt silinir.
 
 ## İnternetten alınan veriler
 
-Dizi listesi, dizi ve oyuncu ayrıntıları Seyir'in kendi sunucusundan (Supabase altyapısı, Frankfurt/Almanya) indirilir. Afişler ve oyuncu fotoğrafları doğrudan TMDB'nin sunucularından yüklenir. Her internet bağlantısında olduğu gibi bu sunucular teknik kayıtlarda cihazınızın IP adresini ve istek zamanını görebilir; Seyir bu bilgiyi toplamaz, saklamaz ve sizi tanımlamak için kullanmaz.
+Dizi listesi, dizi ve oyuncu ayrıntıları Seyir'in kendi sunucusundan indirilir. Afişler ve oyuncu fotoğrafları doğrudan TMDB'nin sunucularından yüklenir. Her internet bağlantısında olduğu gibi bu sunucular teknik kayıtlarda cihazınızın IP adresini ve istek zamanını görebilir; Seyir bu bilgiyi sizi tanımlamak için kullanmaz.
 
-Seyir'in sunucusuna sizinle ilgili hiçbir bilgi (ad, fotoğraf, favori, puan, liste) gönderilmez; tek istisna yukarıda anlatılan bildirim kaydıdır.
+## Hizmet sağlayıcılar
+
+Verileriniz yalnızca uygulamanın çalışması için gereken altyapı sağlayıcılarında işlenir: **Apple** (giriş ve bildirim iletimi), **Supabase** (veritabanı ve kimlik doğrulama, Frankfurt/Almanya), **Expo** (bildirim iletimi). Bunların dışında hiçbir kuruma veri aktarılmaz; yalnızca yasal bir zorunluluk olursa yetkili makamlarla paylaşılabilir.
 
 ## Veri kaynakları
 
@@ -56,16 +58,23 @@ Dizi, oyuncu ve görsel bilgileri [TMDB](https://www.themoviedb.org) tarafından
 
 ## Çocuklar
 
-Seyir 13 yaş ve üzeri için derecelendirilmiştir. Çocuklardan bilerek veri toplanmaz; zaten uygulama kimseden kişisel veri toplamaz.
+Seyir 13 yaş ve üzeri içindir. Çocuklardan bilerek veri toplanmaz. Bir çocuğun hesap açtığını fark edersek hesabı sileriz; bize yazabilirsiniz.
 
-## Verilerinizi silmek
+## Haklarınız: görme, düzeltme, silme
 
-Telefonunuzdaki Seyir verilerini silmek için uygulamayı silmeniz yeterlidir. Profil fotoğrafınızı ya da adınızı uygulama içinden de kaldırabilirsiniz. Sunucudaki bildirim kaydınızı silmek için Ayarlar'dan bildirimleri kapatmanız yeterlidir.
+- Hesabınızdaki tüm veriler uygulamada görünür; ad, listeler, puanlar ve favoriler uygulama içinden değiştirilebilir.
+- **Hesabımı sil:** Ayarlar → Hesap → "Hesabımı sil". Hesabınız, e-posta adresiniz ve bütün kişisel verileriniz sunucudan kalıcı olarak silinir, Apple ile giriş bağlantısı iptal edilir, telefonunuzdaki kopya temizlenir. Geri alınamaz.
+- **Çıkış yap:** hesabınız durur, telefonunuzdaki kişisel kopya temizlenir.
+- Bu işlemleri uygulama içinden yapamıyorsanız e-posta ile bize yazın; en geç 30 gün içinde yerine getirilir.
+
+## Güvenlik
+
+Veriler şifreli bağlantıyla (HTTPS) taşınır ve her kullanıcı yalnızca kendi verisine erişebilecek şekilde sunucuda kural tanımlıdır. Şifre saklanmaz; giriş Apple üzerinden yapılır.
 
 ## Gelecekteki değişiklikler
 
-İleride hesap, yorum ya da liste paylaşımı gibi özellikler eklenirse bu metin güncellenir ve uygulamada duyurulur. Yeni bir veri toplanmaya başlanmadan önce bu sayfada ne toplandığı açıkça yazılır.
+İleride yorum, takip ya da herkese açık profil gibi özellikler eklenirse bu metin güncellenir ve uygulamada duyurulur. Yeni bir veri toplanmaya başlanmadan önce bu sayfada ne toplandığı açıkça yazılır.
 
 ## İletişim
 
-Sorularınız için: **seyirapp.help@gmail.com**
+Sorularınız ve talepleriniz için: **seyirapp.help@gmail.com**
