@@ -12,6 +12,7 @@ Seyir, Türk dizilerini bir arada bulabileceğiniz, izlediklerinizi ve izleyecek
 
 Soru, öneri ya da hata bildirimi için: [seyirapp.help@gmail.com](mailto:seyirapp.help@gmail.com)
 
-## Gizlilik
+## Gizlilik ve kurallar
 
-[Gizlilik politikası](gizlilik)
+- [Gizlilik politikası](gizlilik)
+- [Kullanım koşulları ve topluluk kuralları](kosullar)
