@@ -6,7 +6,7 @@ lang: tr
 
 # Seyir — Gizlilik Politikası
 
-**Son güncelleme:** 31 Ekim 2026
+**Son güncelleme:** 1 Kasım 2026
 
 Seyir, Türk dizilerini takip etmek için yapılmış bir iPhone uygulamasıdır. Bu metin, uygulamanın hangi verileri topladığını, neden topladığını ve bunlara ne olduğunu kısa ve açık biçimde anlatır. Aynı zamanda 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamındaki aydınlatma metnidir.
 
@@ -15,7 +15,7 @@ Seyir, Türk dizilerini takip etmek için yapılmış bir iPhone uygulamasıdır
 ## Kısaca
 
 - Dizileri gezmek, aramak ve yayın takvimine bakmak için hesap gerekmez; bu sırada sizinle ilgili hiçbir veri toplanmaz.
-- İzleme listesi, puan, favori, liste ve bildirim gibi kişisel özellikler için **Apple ile giriş** yaparsınız. Şifre yoktur; kimliğinizi Apple doğrular.
+- İzleme listesi, puan, favori, liste, yorum ve bildirim gibi kişisel özellikler için giriş yaparsınız: **Apple ile**, **Google ile** ya da **e-posta + şifre** ile. Apple ve Google girişinde şifre tutulmaz; e-posta ile kayıt olursanız şifreniz sunucuda tek yönlü şifrelenmiş (geri çevrilemez) olarak saklanır.
 - Giriş yapınca Apple'dan gelen e-posta adresiniz ile uygulamada oluşturduğunuz veriler (izleme durumları, puanlar, favoriler, listeler, yorumlar, takip ettikleriniz) hesabınıza bağlı olarak sunucumuzda saklanır. Böylece telefon değiştirseniz de kaybolmazlar.
 - Seyir bir topluluktur: **kullanıcı adınız, izleme durumlarınız, puanlarınız, favorileriniz, listeleriniz, yorumlarınız ve takipçi/takip listeleriniz diğer kullanıcılara açıktır.** Gizli profil yoktur. **E-posta adresiniz hiç kimseye gösterilmez.**
 - Reklam yoktur, kullanım ölçümü (analitik) yoktur, üçüncü taraf takip aracı yoktur. Verileriniz satılmaz, kimseyle paylaşılmaz.
@@ -23,11 +23,11 @@ Seyir, Türk dizilerini takip etmek için yapılmış bir iPhone uygulamasıdır
 
 ## Hesap ve toplanan veriler
 
-Apple ile giriş yaptığınızda şunlar saklanır:
+Giriş yaptığınızda şunlar saklanır:
 
-- **Apple kullanıcı kimliği:** Apple'ın hesabınız için ürettiği, yalnızca Seyir'e özel rastgele bir kod. Sizi tanımak için kullanılır.
-- **E-posta adresiniz:** Apple'dan gelir. Apple'ın "E-postamı gizle" seçeneğini kullanırsanız gerçek adresiniz yerine Apple'ın verdiği aktarma adresi saklanır; bu da bizim için yeterlidir. E-posta yalnızca hesabınızı tanımlamak için tutulur; bülten ya da reklam gönderilmez.
-- **Kullanıcı adınız:** girişten hemen sonraki "Hoş geldin" ekranında seçersiniz; herkese açıktır ve 30 günde bir değiştirilebilir. Gerçek adınız istenmez; Apple girişinde yalnızca e-posta adresi istenir, ad istenmez.
+- **Giriş kimliği:** Apple ya da Google'ın hesabınız için ürettiği, Seyir'e özel rastgele bir kod (Apple ile girişte yalnızca Seyir'e özeldir). E-posta ile kayıtta bunun yerine e-posta adresiniz ve şifrenizin tek yönlü şifrelenmiş hali tutulur; şifreniz okunamaz, biz de göremeyiz.
+- **E-posta adresiniz:** Apple'dan, Google'dan ya da sizden gelir. Apple'ın "E-postamı gizle" seçeneğini kullanırsanız gerçek adresiniz yerine Apple'ın verdiği aktarma adresi saklanır; bu da bizim için yeterlidir. E-posta yalnızca hesabınızı tanımlamak ve hesap işlemleri (kayıt doğrulama, şifre sıfırlama) için kullanılır; bülten ya da reklam gönderilmez. E-posta ile kayıtta ve şifre sıfırlamada adresinize 6 haneli bir doğrulama kodu gönderilir.
+- **Kullanıcı adınız:** girişten hemen sonraki "Hoş geldin" ekranında seçersiniz; herkese açıktır ve 30 günde bir değiştirilebilir. Gerçek adınız istenmez: Apple girişinde yalnızca e-posta adresi istenir; Google girişinde Google'ın gönderdiği ad ve profil resmi **saklanmaz**, yalnızca e-posta ve Google'ın kullanıcı kodu tutulur.
 - **Profil fotoğrafınız (isteğe bağlı):** galeriden ya da kameradan seçerseniz küçültülmüş (256×256) bir kopyası sunucuda saklanır ve profilinizde herkese görünür. Fotoğraf herkese açık bir internet adresinde durur; adresi bilen biri uygulama dışından da görebilir, bu yüzden paylaşmak istemediğiniz bir fotoğrafı seçmeyin. "Fotoğrafı kaldır" dediğinizde dosya silinir. **Kapak görseli** bir dizinin TMDB sahne fotoğrafıdır; sunucuda yalnızca hangisini seçtiğiniz tutulur.
 - **Uygulamada oluşturduğunuz veriler:** izleme durumlarınız (İzleme listem, Seyirdekiler, izlendi işareti), dizilere verdiğiniz puanlar, favori dizileriniz ve oyuncularınız, listeleriniz ve içerikleri, yorumlarınız ve cevaplarınız, beğenileriniz, takip ettikleriniz ve takipçileriniz, engellediğiniz kullanıcılar, yaptığınız şikâyetler.
 - **Uygulama içi bildirim listesi:** size gelen cevap, beğeni ve yeni takipçi olayları, Bildirimler sayfasında gösterilmek üzere son 30 gün sunucuda tutulur, sonra silinir.
@@ -38,7 +38,7 @@ Hesap oluşturmadan önce telefonunuzda biriktirdiğiniz listeler ve puanlar var
 
 ## Yorumlar, şikâyetler ve denetim
 
-Dizi ve oyuncu sayfalarındaki yorumlar herkese açıktır; hesabı olmayanlar da okuyabilir. Yorumlar gönderilmeden önce otomatik bir uygunsuz kelime filtresinden geçer. Şikâyet edilen içerikler ve kullanıcılar Seyir yöneticisi (uygulamanın geliştiricisi) tarafından incelenir; verilen kararlar (silme, askıya alma, yasaklama) tarih ve gerekçesiyle kayıt altına alınır. Yasaklanan hesabın içerikleri silinir; aynı kişinin yeniden hesap açmasını önlemek için yalnızca Apple kullanıcı kimliği (rastgele kod) ve yasaklama kaydı saklanır. Birden fazla kullanıcı tarafından şikâyet edilen yorumlar inceleme bitene kadar otomatik gizlenir.
+Dizi ve oyuncu sayfalarındaki yorumlar herkese açıktır; hesabı olmayanlar da okuyabilir. Yorumlar gönderilmeden önce otomatik bir uygunsuz kelime filtresinden geçer. Şikâyet edilen içerikler ve kullanıcılar Seyir yöneticisi (uygulamanın geliştiricisi) tarafından incelenir; verilen kararlar (silme, askıya alma, yasaklama) tarih ve gerekçesiyle kayıt altına alınır. Yasaklanan hesabın içerikleri silinir; aynı kişinin yeniden hesap açmasını önlemek için yalnızca giriş kimliği (Apple/Google kodu) ya da e-posta adresinin geri çevrilemez özeti ile yasaklama kaydı saklanır. Birden fazla kullanıcı tarafından şikâyet edilen yorumlar inceleme bitene kadar otomatik gizlenir.
 
 ## Telefonunuzda saklananlar
 
@@ -61,11 +61,12 @@ Dizi listesi, dizi ve oyuncu ayrıntıları Seyir'in kendi sunucusundan indirili
 Verileriniz yalnızca uygulamanın çalışması için gereken altyapı sağlayıcılarında işlenir:
 - **Supabase** (ABD şirketi; sunucular Frankfurt/Almanya): veritabanı, dosya depolama (profil fotoğrafları) ve kimlik doğrulama.
 - **Apple** (ABD): Apple ile giriş ve bildirimlerin telefona iletilmesi.
+- **Google** (ABD): Google ile giriş; ayrıca kayıt doğrulama ve şifre sıfırlama e-postaları Gmail üzerinden (seyirapp.help@gmail.com) gönderilir, bu sırada e-posta adresiniz Google'ın posta sunucularından geçer.
 - **Expo** (ABD): bildirimlerin iletilmesi ve uygulama güncellemelerinin (EAS Update) dağıtımı; güncelleme kontrolü sırasında cihazınızın IP adresini görebilir, biz bu bilgiyi almayız.
 
 Bunların dışında hiçbir kuruma veri aktarılmaz; yalnızca yasal bir zorunluluk olursa yetkili makamlarla paylaşılabilir.
 
-**Yurt dışına aktarım:** verileriniz Almanya'daki (Supabase) ve kimlik doğrulama, bildirim ve güncelleme işlemleri için ABD'deki (Apple, Expo) sunucularda işlenir. Bu aktarım, "Hoş geldin" ekranında verdiğiniz açık rızaya dayanır; rızanızı hesabınızı silerek geri alabilirsiniz.
+**Yurt dışına aktarım:** verileriniz Almanya'daki (Supabase) ve kimlik doğrulama, e-posta gönderimi, bildirim ve güncelleme işlemleri için ABD'deki (Apple, Google, Expo) sunucularda işlenir. Bu aktarım, "Hoş geldin" ekranında verdiğiniz açık rızaya dayanır; rızanızı hesabınızı silerek geri alabilirsiniz.
 
 ## Veri kaynakları
 
@@ -87,14 +88,14 @@ Veriler yalnızca bu amaçlarla, hesabınız açık olduğu sürece işlenir; he
 ## Haklarınız (KVKK md. 11): görme, düzeltme, silme
 
 - Hesabınızdaki tüm veriler uygulamada görünür; kullanıcı adı, listeler, puanlar, yorumlar ve favoriler uygulama içinden değiştirilebilir.
-- **Hesabımı sil:** Ayarlar → Hesap → "Hesabımı sil". Hesabınız, e-posta adresiniz, kullanıcı adınız, profil fotoğrafınız ve bütün verileriniz (yorumlar, beğeniler, takipler dahil) sunucudan kalıcı olarak silinir, Apple ile giriş bağlantısı iptal edilir, telefonunuzdaki kopya temizlenir. Cevap almış yorumlarınız yazar bilgisi olmadan "[silindi]" olarak kalır. Geri alınamaz.
+- **Hesabımı sil:** Ayarlar → Hesap → "Hesabımı sil". Hesabınız, e-posta adresiniz, kullanıcı adınız, profil fotoğrafınız ve bütün verileriniz (yorumlar, beğeniler, takipler dahil) sunucudan kalıcı olarak silinir, Apple ile giriş yaptıysanız Apple bağlantısı iptal edilir, telefonunuzdaki kopya temizlenir. Cevap almış yorumlarınız yazar bilgisi olmadan "[silindi]" olarak kalır. Geri alınamaz.
 - **Çıkış yap:** hesabınız durur, telefonunuzdaki kişisel kopya temizlenir.
 - KVKK md. 11 kapsamında: verilerinizin işlenip işlenmediğini öğrenme, bilgi talep etme, amacına uygun kullanılıp kullanılmadığını öğrenme, aktarıldığı tarafları bilme, düzeltilmesini, silinmesini ya da yok edilmesini isteme, bu işlemlerin aktarılan taraflara bildirilmesini isteme, otomatik sistemlerle analiz sonucu aleyhinize bir sonuca itiraz etme ve zarara uğramanız halinde tazminat talep etme hakkınız vardır.
 - **Başvuru:** bu işlemleri uygulama içinden yapamıyorsanız ya da haklarınızı kullanmak isterseniz **seyirapp.help@gmail.com** adresine, hesabınızın kullanıcı adını belirterek yazın. Başvurular en geç **30 gün** içinde ücretsiz sonuçlandırılır. Sonuçtan memnun kalmazsanız Kişisel Verileri Koruma Kurulu'na şikâyet hakkınız saklıdır.
 
 ## Güvenlik
 
-Veriler şifreli bağlantıyla (HTTPS) taşınır; sunucuda her kullanıcı yalnızca kendi verisini değiştirebilecek, herkese açık olmayan verileri (e-posta, engellemeler, şikâyetler) yalnızca kendisi görebilecek şekilde kural tanımlıdır. Şifre saklanmaz; giriş Apple üzerinden yapılır.
+Veriler şifreli bağlantıyla (HTTPS) taşınır; sunucuda her kullanıcı yalnızca kendi verisini değiştirebilecek, herkese açık olmayan verileri (e-posta, engellemeler, şikâyetler) yalnızca kendisi görebilecek şekilde kural tanımlıdır. Apple ve Google girişinde şifre saklanmaz; e-posta ile kayıtta şifre yalnızca tek yönlü şifrelenmiş (geri çevrilemez) biçimde tutulur.
 
 ## Gelecekteki değişiklikler
 

@@ -14,7 +14,7 @@ Seyir'i kullanarak ve girişten sonraki "Hoş geldin" ekranında onay vererek a�
 Seyir, Türk dizilerini takip etmek için yapılmış ücretsiz bir uygulamadır. Dizi bilgileri TMDB'den alınır; Seyir bu bilgilerin doğruluğunu garanti etmez. Uygulama "olduğu gibi" sunulur; kesintisiz çalışacağı taahhüt edilmez.
 
 ## 2. Hesap
-- Hesap için Apple ile giriş gerekir. Hesabınızdan yapılan her şeyden siz sorumlusunuz.
+- Hesap için Apple, Google ya da e-posta + şifre ile giriş gerekir. Hesabınızdan yapılan her şeyden siz sorumlusunuz; şifrenizi kimseyle paylaşmayın.
 - Seyir **13 yaş ve üzeri** içindir. 13 yaşından küçükseniz hesap açmayın.
 - Kullanıcı adınız 3–20 karakter, küçük harf, rakam ve alt çizgiden oluşur; başkasını taklit eden, hakaret içeren ya da yanıltıcı adlar değiştirilir.
 - Bir kişi bir hesap açar. Hesabınızı başkasına devredemezsiniz.
