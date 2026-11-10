@@ -1,0 +1,3 @@
+# Seyir sitesi (GitHub Pages, seyirdizi.app)
+# .well-known klasörü nokta ile başladığı için Jekyll varsayılan olarak yayınlamaz; Universal Links dosyası için gerekli.
+include: [".well-known"]

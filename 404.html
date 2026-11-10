@@ -1,0 +1,56 @@
+---
+permalink: /404.html
+layout: null
+---
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seyir'de aç</title>
+<meta name="description" content="Bu bağlantı Seyir uygulamasında açılır.">
+<meta name="apple-itunes-app" content="app-id=6826818432">
+<style>
+  :root { --zemin: #f6f7f9; --kart: #ffffff; --yazi: #15181d; --soluk: #5d6573; --vurgu: #0fa3a3; --vurgu-yazi: #ffffff; --cizgi: #e3e6ea; }
+  @media (prefers-color-scheme: dark) {
+    :root { --zemin: #0f1216; --kart: #181c22; --yazi: #eef1f4; --soluk: #9aa3af; --vurgu: #2cc2c2; --vurgu-yazi: #0f1216; --cizgi: #262c34; }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px 16px;
+         background: var(--zemin); color: var(--yazi);
+         font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  main { width: 100%; max-width: 420px; background: var(--kart); border: 1px solid var(--cizgi); border-radius: 20px;
+         padding: 32px 24px; text-align: center; }
+  .logo { font-weight: 700; letter-spacing: .02em; color: var(--vurgu); font-size: 15px; margin-bottom: 20px; }
+  h1 { font-size: 26px; line-height: 1.25; margin: 0 0 10px; }
+  p { color: var(--soluk); margin: 0 0 24px; }
+  .dugme { display: block; padding: 14px 18px; border-radius: 14px; background: var(--vurgu); color: var(--vurgu-yazi);
+           font-weight: 600; text-decoration: none; }
+  .dugme:focus-visible { outline: 3px solid var(--yazi); outline-offset: 2px; }
+  .alt { margin-top: 20px; font-size: 14px; }
+  .alt a { color: var(--soluk); margin: 0 8px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="logo">Seyir</div>
+  <h1 id="baslik">Seyir'de aç</h1>
+  <p id="metin">Bu bağlantı Seyir uygulamasında açılır. Seyir, Türk dizilerini takip etmek için ücretsiz bir iPhone uygulaması.</p>
+  <a class="dugme" href="https://apps.apple.com/app/id6826818432">App Store'dan indir</a>
+  <p class="alt"><a href="/">Ana sayfa</a><a href="/gizlilik">Gizlilik</a><a href="/kosullar">Koşullar</a></p>
+</main>
+<script>
+  // Yalnızca adresin türüne göre genel metin; dizi/liste bilgisi gösterilmez (TMDB verisi sitede yok).
+  (function () {
+    var y = location.pathname.split('/').filter(Boolean);
+    var b = document.getElementById('baslik'), m = document.getElementById('metin');
+    var son = ' Uygulama yüklüyse bağlantı doğrudan Seyir\'de açılır.';
+    if (y[0] === 'dizi' && y[1]) { b.textContent = "Bu dizi Seyir'de"; m.textContent = 'Diziyi takip etmek, yorumları okumak ve yeni bölümlerden haberdar olmak için Seyir\'i indir.' + son; }
+    else if (y[0] === 'u' && y[1]) { b.textContent = "Bu profil Seyir'de"; m.textContent = 'Profili görmek ve takip etmek için Seyir\'i indir.' + son; }
+    else if (y[0] === 'liste' && y[1]) { b.textContent = "Bu liste Seyir'de"; m.textContent = 'Listeyi görmek için Seyir\'i indir.' + son; }
+    else { b.textContent = 'Sayfa bulunamadı'; m.textContent = 'Aradığın sayfa burada değil. Seyir, Türk dizilerini takip etmek için ücretsiz bir iPhone uygulaması.'; }
+  })();
+</script>
+</body>
+</html>
