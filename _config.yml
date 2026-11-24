@@ -1,3 +1,4 @@
 # Seyir sitesi (GitHub Pages, seyirdizi.app)
 # .well-known klasörü nokta ile başladığı için Jekyll varsayılan olarak yayınlamaz; Universal Links dosyası için gerekli.
-include: [".well-known"]
+# _expo: web uygulamasının dosyaları (alt çizgiyle başladığı için Jekyll varsayılan olarak yayınlamaz) — 24 Kasım
+include: [".well-known", "_expo"]
