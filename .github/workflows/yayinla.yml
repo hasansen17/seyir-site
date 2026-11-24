@@ -16,11 +16,9 @@ concurrency:
   group: pages
   cancel-in-progress: false
 jobs:
-  yayinla:
+  # GitHub'ın önerdiği gibi iki aşama: hazırla (yükle) → yayınla (yükleme görünür olunca)
+  hazirla:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.dagit.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
@@ -31,11 +29,18 @@ jobs:
       - name: Dizi sayfaları ve sitemap
         run: |
           sudo chown -R "$USER" _site
-          # Apple Universal Links dosyası (Jekyll eylemi nokta klasörünü atlıyor): elle kopyalanır, JSON olarak sunulur
+          # Apple Universal Links dosyası (Jekyll eylemi nokta klasörünü atlıyor): elle kopyalanır
           mkdir -p _site/.well-known && cp .well-known/apple-app-site-association _site/.well-known/
           node .github/betikler/dizi_sayfalari.mjs _site
       - uses: actions/upload-pages-artifact@v4
         with:
           include-hidden-files: true
+  yayinla:
+    needs: hazirla
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.dagit.outputs.page_url }}
+    steps:
       - id: dagit
         uses: actions/deploy-pages@v4
