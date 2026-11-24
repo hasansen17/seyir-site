@@ -32,9 +32,15 @@ jobs:
           # Apple Universal Links dosyası (Jekyll eylemi nokta klasörünü atlıyor): elle kopyalanır
           mkdir -p _site/.well-known && cp .well-known/apple-app-site-association _site/.well-known/
           node .github/betikler/dizi_sayfalari.mjs _site
-      - uses: actions/upload-pages-artifact@v4
+      # upload-pages-artifact nokta ile başlayan klasörleri atıyor; .well-known (Apple) için paket elle hazırlanır
+      - name: Paketle
+        run: tar --dereference --hard-dereference --directory _site -cvf "$RUNNER_TEMP/artifact.tar" --exclude=.git --exclude=.github . | grep -c . && tar -tf "$RUNNER_TEMP/artifact.tar" | grep well-known
+      - uses: actions/upload-artifact@v4
         with:
-          include-hidden-files: true
+          name: github-pages
+          path: ${{ runner.temp }}/artifact.tar
+          retention-days: 1
+          if-no-files-found: error
   yayinla:
     needs: hazirla
     runs-on: ubuntu-latest
