@@ -31,7 +31,11 @@ jobs:
       - name: Dizi sayfaları ve sitemap
         run: |
           sudo chown -R "$USER" _site
+          # Apple Universal Links dosyası (Jekyll eylemi nokta klasörünü atlıyor): elle kopyalanır, JSON olarak sunulur
+          mkdir -p _site/.well-known && cp .well-known/apple-app-site-association _site/.well-known/
           node .github/betikler/dizi_sayfalari.mjs _site
       - uses: actions/upload-pages-artifact@v4
+        with:
+          include-hidden-files: true
       - id: dagit
         uses: actions/deploy-pages@v4
