@@ -6,7 +6,7 @@ lang: tr
 
 # Seyir — Gizlilik Politikası
 
-**Son güncelleme:** 9 Kasım 2026
+**Son güncelleme:** 25 Kasım 2026 · [English](/en/gizlilik)
 
 Seyir, Türk dizilerini takip etmek için yapılmış bir iPhone uygulamasıdır. Bu metin, uygulamanın hangi verileri topladığını, neden topladığını ve bunlara ne olduğunu kısa ve açık biçimde anlatır. Aynı zamanda 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamındaki aydınlatma metnidir.
 
@@ -31,7 +31,7 @@ Giriş yaptığınızda şunlar saklanır:
 - **Profil fotoğrafınız (isteğe bağlı):** galeriden ya da kameradan seçerseniz küçültülmüş (256×256) bir kopyası sunucuda saklanır ve profilinizde herkese görünür. Fotoğraf herkese açık bir internet adresinde durur; adresi bilen biri uygulama dışından da görebilir, bu yüzden paylaşmak istemediğiniz bir fotoğrafı seçmeyin. "Fotoğrafı kaldır" dediğinizde dosya silinir. **Kapak görseli** için iki seçenek vardır: bir dizinin TMDB sahne fotoğrafını seçerseniz sunucuda yalnızca hangisini seçtiğiniz tutulur; **galerinizden bir fotoğraf yüklerseniz** kırptığınız bölge küçültülerek (yaklaşık 1500×600) sunucuda saklanır ve profilinizde herkese görünür. Kapak fotoğrafı da profil fotoğrafı gibi herkese açık bir adreste durur; "Kapağı kaldır" dediğinizde dosya silinir.
 - **Uygulamada oluşturduğunuz veriler:** izleme durumlarınız (İzleme listem, Seyirdekiler, izlendi işareti), dizilere verdiğiniz puanlar, bölümlere verdiğiniz puanlar ve tepkiler, quiz sonuçlarınız (puan ve süre; dizi sayfasındaki ilk 10 listesinde kullanıcı adınızla görünür) ve quiz istekleriniz, favori dizileriniz ve oyuncularınız, listeleriniz ve içerikleri, yorumlarınız ve cevaplarınız, beğenileriniz, takip ettikleriniz ve takipçileriniz, engellediğiniz kullanıcılar, yaptığınız şikâyetler.
 - **Uygulama içi bildirim listesi:** size gelen cevap, beğeni ve yeni takipçi olayları, Bildirimler sayfasında gösterilmek üzere son 30 gün sunucuda tutulur, sonra silinir.
-- **Kullanım kaydı:** giriş yapmış hesaplar için uygulamayı en son ne zaman açtığınız ("son görülme") ve hangi günler kullandığınız (gün bazında, saat yok) sunucuda tutulur. Bu kayıt yalnızca toplu sayılar için kullanılır (ör. "bugün kaç kişi uygulamayı açtı"); kimin ne zaman girdiği başka kullanıcılara gösterilmez, bireysel olarak incelenmez, reklam ya da profilleme için kullanılmaz. Günlük kullanım satırları 90 gün sonra silinir; hesabınızı sildiğinizde tamamı silinir.
+- **Kullanım kaydı:** giriş yapmış hesaplar için uygulamayı en son ne zaman açtığınız ("son görülme") hangi günler kullandığınız (gün bazında, saat yok) ve hangi platformdan girdiğiniz (iPhone, Android ya da web) sunucuda tutulur. Bu kayıt yalnızca toplu sayılar için kullanılır (ör. "bugün kaç kişi uygulamayı açtı"); kimin ne zaman girdiği başka kullanıcılara gösterilmez, bireysel olarak incelenmez, reklam ya da profilleme için kullanılmaz. Günlük kullanım satırları 400 gün sonra silinir; hesabınızı sildiğinizde tamamı silinir.
 
 Bu veriler Seyir'in sunucusunda (Supabase altyapısı, Frankfurt/Almanya) saklanır. Profil verileriniz (izleme durumları, puanlar, favoriler, listeler, yorumlar, takip listeleri) diğer kullanıcılara açıktır; engellediğiniz ve sizi engelleyen kullanıcılar bunları göremez. Engellemeleriniz ve şikâyetleriniz yalnızca size ve Seyir yöneticisine görünür. Dizi puanlarınız ayrıca diziye verilen ortalama "Seyir puanı"na katılır. **Bölüm puanlarınız ve tepkileriniz yalnızca toplu sayı olarak görünür** (bölümün ortalama puanı, kaç kişinin hangi tepkiyi verdiği); kimin ne verdiği hiç kimseye gösterilmez, profilinizde de yer almaz.
 
@@ -44,6 +44,7 @@ Dizi ve oyuncu sayfalarındaki yorumlar herkese açıktır; hesabı olmayanlar d
 ## Telefonunuzda saklananlar
 
 - Daha hızlı açılması için dizi ve oyuncu bilgilerinin ve hesabınızdaki verilerin bir kopyası (önbellek) telefonunuzda durur. Çıkış yaptığınızda kişisel kopya temizlenir.
+- Web sitesinde dil seçiminiz (Türkçe/İngilizce) tarayıcınızda hatırlanır.
 
 ## Fotoğraf ve kamera izni
 
@@ -51,7 +52,7 @@ Profil fotoğrafı ya da kapak fotoğrafı seçmek isterseniz uygulama galeriniz
 
 ## Bildirimler
 
-Bildirimleri açarsanız (uygulama sorar; istemezseniz hiçbir şey gönderilmez) cihazınızın bildirim adresi (Apple ve Expo'nun bildirim iletmek için verdiği rastgele bir kod, "push token") hesabınıza bağlı olarak sunucuda saklanır. Bildirim türleri Ayarlar'dan ayrı ayrı kapatılabilir: yeni bölüm (her gün akşam, takip ettiğiniz dizilerden o gün yeni bölümü olan varsa), yorumunuza cevap, yorumunuzun beğenilmesi, yeni takipçi, quiz ("Quiz iste" dediğiniz bir dizinin quizi açılınca). Bildirimler başka amaçla (reklam, duyuru) kullanılmaz. Bildirimlerin tümünü kapattığınızda ya da çıkış yaptığınızda kayıt silinir.
+Bildirimleri açarsanız (uygulama sorar; istemezseniz hiçbir şey gönderilmez) cihazınızın bildirim adresi (Apple ve Expo'nun bildirim iletmek için verdiği rastgele bir kod, "push token") ve telefonunuzun dili (Türkçe ya da İngilizce; bildirimler bu dilde gelsin diye) hesabınıza bağlı olarak sunucuda saklanır. Bildirim türleri Ayarlar'dan ayrı ayrı kapatılabilir: yeni bölüm (her gün akşam, takip ettiğiniz dizilerden o gün yeni bölümü olan varsa), yorumunuza cevap, yorumunuzun beğenilmesi, yeni takipçi, quiz ("Quiz iste" dediğiniz bir dizinin quizi açılınca). Bildirimler başka amaçla (reklam, duyuru) kullanılmaz. Bildirimlerin tümünü kapattığınızda ya da çıkış yaptığınızda kayıt silinir.
 
 ## İnternetten alınan veriler
 
@@ -64,6 +65,7 @@ Verileriniz yalnızca uygulamanın çalışması için gereken altyapı sağlay�
 - **Apple** (ABD): Apple ile giriş ve bildirimlerin telefona iletilmesi.
 - **Google** (ABD): Google ile giriş; ayrıca kayıt doğrulama ve şifre sıfırlama e-postaları Gmail üzerinden (seyirapp.help@gmail.com) gönderilir, bu sırada e-posta adresiniz Google'ın posta sunucularından geçer.
 - **Expo** (ABD): bildirimlerin iletilmesi ve uygulama güncellemelerinin (EAS Update) dağıtımı; güncelleme kontrolü sırasında cihazınızın IP adresini görebilir, biz bu bilgiyi almayız.
+- **GitHub** (ABD): seyirdizi.app web sitesinin barındırılması.
 
 Bunların dışında hiçbir kuruma veri aktarılmaz; yalnızca yasal bir zorunluluk olursa yetkili makamlarla paylaşılabilir.
 
@@ -71,7 +73,7 @@ Bunların dışında hiçbir kuruma veri aktarılmaz; yalnızca yasal bir zorunl
 
 ## Veri kaynakları
 
-Dizi, oyuncu ve görsel bilgileri [TMDB](https://www.themoviedb.org) tarafından sağlanır. Bu uygulama TMDB'yi ve TMDB API'lerini kullanır; ancak TMDB tarafından onaylanmış, belgelendirilmiş ya da başka bir şekilde desteklenmiş değildir. *(This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.)* "Nerede izlenir" bilgisi JustWatch'tan gelir.
+Dizi, oyuncu ve görsel bilgileri [TMDB](https://www.themoviedb.org) tarafından sağlanır. Bu uygulama TMDB'yi ve TMDB API'lerini kullanır; ancak TMDB tarafından onaylanmış, belgelendirilmiş ya da başka bir şekilde desteklenmiş değildir. *(This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.)* "Nerede izlenir" bilgisi JustWatch'tan gelir. Seyir haberlerini Seyir, her haberin altında listelenen açık kaynaklardan kendisi yazar; haberlerin, quizlerin ve bazı dizi özetlerinin İngilizcesi otomatik çevrilir.
 
 ## Çocuklar
 

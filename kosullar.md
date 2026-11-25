@@ -6,7 +6,7 @@ lang: tr
 
 # Seyir — Kullanım Koşulları ve Topluluk Kuralları
 
-**Son güncelleme:** 30 Ekim 2026
+**Son güncelleme:** 30 Ekim 2026 · [English](/en/kosullar)
 
 Seyir'i kullanarak ve girişten sonraki "Hoş geldin" ekranında onay vererek aşağıdaki koşulları kabul etmiş olursunuz. Kısa tuttuk; lütfen okuyun.
 
