@@ -18,6 +18,14 @@ if (!r.ok) {
 const liste = await r.json();
 const taban = liste.afisTaban || 'https://image.tmdb.org/t/p/';
 const diziler = (liste.diziler || []).filter((d) => d && d.id && d.ad);
+// İngilizce ad ve özetler (25 Kasım, çok dilli): katalog/en.json { id: [ad, ozet] }; yoksa Türkçe ad
+let en = {};
+try {
+  const e = await fetch(KATALOG.replace('liste.json', 'en.json'));
+  if (e.ok) en = (await e.json()).diziler || {};
+} catch {}
+const GUN_EN = { Pazartesi: 'Monday', Salı: 'Tuesday', Çarşamba: 'Wednesday', Perşembe: 'Thursday', Cuma: 'Friday', Cumartesi: 'Saturday', Pazar: 'Sunday' };
+const enSablon = sablon.replace('<html lang="tr"', '<html lang="en"');
 
 function meta(html, ad, deger, ozellik = false) {
   const anahtar = ozellik ? 'property' : 'name';
@@ -42,12 +50,34 @@ for (const d of diziler) {
   h = meta(h, 'og:url', adres, true);
   if (d.afis) h = meta(h, 'og:image', `${taban}w780${d.afis}`, true);
   h = meta(h, 'twitter:card', d.afis ? 'summary_large_image' : 'summary');
-  h = h.replace('</head>', `    <link rel="canonical" href="${adres}" />\n  </head>`);
+  const enAdres = `${KOK}/en/dizi/${d.id}`;
+  const diller = `    <link rel="alternate" hreflang="tr" href="${adres}" />\n    <link rel="alternate" hreflang="en" href="${enAdres}" />\n    <link rel="alternate" hreflang="x-default" href="${adres}" />\n`;
+  h = h.replace('</head>', `    <link rel="canonical" href="${adres}" />\n${diller}  </head>`);
   // JavaScript'siz okuyucular (arama motorları) için kısa içerik
   h = h.replace(/<noscript>[\s\S]*?<\/noscript>/, `<noscript><h1>${kacir(d.ad)}</h1><p>${kacir(aciklama)}</p></noscript>`);
   mkdirSync(`${SITE}/dizi/${d.id}`, { recursive: true });
   writeFileSync(`${SITE}/dizi/${d.id}/index.html`, h);
   n++;
+
+  // İngilizce sayfa: /en/dizi/<id>
+  const [adEn, ozetEn] = en[d.id] || [];
+  const ad = adEn || d.ad;
+  const adTam = adEn && adEn !== d.ad ? `${adEn} (${d.ad})` : d.ad;
+  const baslikEn = `${adTam}${ek ? ` · ${ek}` : ''} · Turkish series · Seyir`;
+  const aciklamaEn = `${ad}${nerede ? ` on ${nerede}` : ''}${d.yayinGunu && d.durum === 'devam' ? ` · ${GUN_EN[d.yayinGunu] || d.yayinGunu}s` : ''}: ${ozetEn ? ozetEn.slice(0, 160).replace(/\s+\S*$/, '') + '… ' : ''}Episodes, cast, trailers and ratings on Seyir.`;
+  let e = enSablon.replace(/<title>[^<]*<\/title>/, `<title>${kacir(baslikEn)}</title>`);
+  e = meta(e, 'description', aciklamaEn);
+  e = meta(e, 'og:type', 'video.tv_show', true);
+  e = meta(e, 'og:title', `${ad} · Seyir`, true);
+  e = meta(e, 'og:description', aciklamaEn, true);
+  e = meta(e, 'og:url', enAdres, true);
+  e = meta(e, 'og:locale', 'en_US', true);
+  if (d.afis) e = meta(e, 'og:image', `${taban}w780${d.afis}`, true);
+  e = meta(e, 'twitter:card', d.afis ? 'summary_large_image' : 'summary');
+  e = e.replace('</head>', `    <link rel="canonical" href="${enAdres}" />\n${diller}  </head>`);
+  e = e.replace(/<noscript>[\s\S]*?<\/noscript>/, `<noscript><h1>${kacir(adTam)}</h1><p>${kacir(aciklamaEn)}</p></noscript>`);
+  mkdirSync(`${SITE}/en/dizi/${d.id}`, { recursive: true });
+  writeFileSync(`${SITE}/en/dizi/${d.id}/index.html`, e);
 }
 
 const sabit = ['/', '/diziler', '/takvim', '/gundem', '/quiz', '/hakkinda', '/gizlilik', '/kosullar'];
@@ -58,7 +88,9 @@ writeFileSync(
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${[
     ...sabit.map((y) => satir(y, y === '/' ? '1.0' : '0.6')),
     ...diziler.map((d) => satir(`/dizi/${d.id}`, d.durum === 'devam' ? '0.8' : '0.5')),
+    ...['/en', '/en/diziler', '/en/takvim', '/en/gundem', '/en/quiz', '/en/hakkinda'].map((y) => satir(y, y === '/en' ? '0.9' : '0.5')),
+    ...diziler.map((d) => satir(`/en/dizi/${d.id}`, d.durum === 'devam' ? '0.7' : '0.4')),
   ].join('\n')}\n</urlset>\n`,
 );
 writeFileSync(`${SITE}/robots.txt`, `User-agent: *\nAllow: /\nSitemap: ${KOK}/sitemap.xml\n`);
-console.log(`Dizi sayfaları: ${n}; sitemap: ${sabit.length + n} adres`);
+console.log(`Dizi sayfaları: ${n} Türkçe + ${n} İngilizce; sitemap: ${sabit.length + 6 + 2 * n} adres`);
